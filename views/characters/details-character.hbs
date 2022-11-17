@@ -4,3 +4,19 @@
 <h3> Occupation: {{ character.occupation }} </h3>
 
 <p> Weapon: {{ character.weapon }} </p>
+
+<p></p>
+
+<a href="/characters/{{character.id}}/edit">Edit Character</a>
+
+<p></p>
+
+<form action="/characters/{{character.id}}/delete" method="post">
+
+<button type="submit">Delete Character</button>
+
+</form>
+
+{{!-- 
+<a href="/characters/{{character.id}}/delete">Delete Character</a> --}}
+{{!-- the default on an a tag is a get route. on a form you can specify it's a post so we had to switch it --}}
